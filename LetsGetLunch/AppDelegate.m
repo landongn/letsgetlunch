@@ -7,14 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTabViewController.h"
+#import "LoadingViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    BOOL firstLoad;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    firstLoad = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(loadingFinished:)
+                                                 name:@"AppLoaded"
+                                               object:nil];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    if (firstLoad) {
+        self.window.rootViewController = [[LoadingViewController alloc] init];
+        firstLoad = NO;
+    } else {
+        [self.window setRootViewController:[[MainTabViewController alloc] init]];
+    }
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -44,6 +63,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)loadingFinished:(NSNotification *)notification {
+    self.window.rootViewController = [[MainTabViewController alloc] initWithNibName:nil bundle:nil];
 }
 
 @end

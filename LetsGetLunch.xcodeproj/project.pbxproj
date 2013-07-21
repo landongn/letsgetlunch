@@ -9,7 +9,26 @@
 /* Begin PBXBuildFile section */
 		40DF68F4AEBA438F82D5F027 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFDE4F165BEF487D90FDF7D6 /* libPods.a */; };
 		442EEE0D1799F38200622510 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE0B1799F38200622510 /* LoadingViewController.m */; };
-		442EEE0E1799F38200622510 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442EEE0C1799F38200622510 /* LoadingViewController.xib */; };
+		442EEE201799F73200622510 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE1F1799F73200622510 /* MainTabViewController.m */; };
+		442EEE23179A01E000622510 /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE22179A01E000622510 /* Appointment.m */; };
+		442EEE26179A022D00622510 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE25179A022D00622510 /* Contact.m */; };
+		442EEE29179A033300622510 /* ContactService.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE28179A033300622510 /* ContactService.m */; };
+		442EEE2C179A438700622510 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442EEE2A179A438700622510 /* AddressBook.framework */; };
+		442EEE2D179A438800622510 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442EEE2B179A438700622510 /* AddressBookUI.framework */; };
+		442EEE30179A458B00622510 /* RecentNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE2F179A458B00622510 /* RecentNavigationViewController.m */; };
+		442EEE35179A4B7F00622510 /* RecentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE33179A4B7F00622510 /* RecentHomeViewController.m */; };
+		442EEE36179A4B7F00622510 /* RecentHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442EEE34179A4B7F00622510 /* RecentHomeViewController.xib */; };
+		442EEE39179AE32000622510 /* InboxNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE38179AE32000622510 /* InboxNavigationViewController.m */; };
+		442EEE3D179AF67200622510 /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE3C179AF67200622510 /* NearbyViewController.m */; };
+		442EEE41179AF7D300622510 /* InviteNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE40179AF7D300622510 /* InviteNavigationViewController.m */; };
+		442EEE65179B509E00622510 /* IntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE64179B509E00622510 /* IntroView.m */; };
+		442EEE6D179B7FF400622510 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442EEE6B179B7FF400622510 /* Reveal.framework */; };
+		442EEE6F179B806700622510 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442EEE6E179B806700622510 /* CFNetwork.framework */; };
+		442EEE71179B806D00622510 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442EEE70179B806D00622510 /* QuartzCore.framework */; };
+		442EEE74179B84CB00622510 /* MadeInTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE73179B84CB00622510 /* MadeInTextView.m */; };
+		442EEE77179B8ACB00622510 /* LogoRED.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE76179B8ACB00622510 /* LogoRED.m */; };
+		442EEE7C179B997D00622510 /* Gotham-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 442EEE79179B997D00622510 /* Gotham-Book.ttf */; };
+		442EEE7F179B9B8000622510 /* Gotham-Ultra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 442EEE7E179B9B8000622510 /* Gotham-Ultra.ttf */; };
 		44886B9A1799F25D00474C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44886B991799F25D00474C35 /* Foundation.framework */; };
 		44886B9C1799F25D00474C35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44886B9B1799F25D00474C35 /* CoreGraphics.framework */; };
 		44886B9E1799F25D00474C35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44886B9D1799F25D00474C35 /* UIKit.framework */; };
@@ -38,7 +57,38 @@
 		1E4BAC226AFB4622B5B7FEDF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		442EEE0A1799F38200622510 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = Controllers/LoadingViewController.h; sourceTree = "<group>"; };
 		442EEE0B1799F38200622510 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Controllers/LoadingViewController.m; sourceTree = "<group>"; };
-		442EEE0C1799F38200622510 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingViewController.xib; path = Controllers/LoadingViewController.xib; sourceTree = "<group>"; };
+		442EEE1E1799F73200622510 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabViewController.h; path = Controllers/MainTabViewController.h; sourceTree = "<group>"; };
+		442EEE1F1799F73200622510 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabViewController.m; path = Controllers/MainTabViewController.m; sourceTree = "<group>"; };
+		442EEE21179A01E000622510 /* Appointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appointment.h; path = Models/Appointment.h; sourceTree = "<group>"; };
+		442EEE22179A01E000622510 /* Appointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appointment.m; path = Models/Appointment.m; sourceTree = "<group>"; };
+		442EEE24179A022D00622510 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = Models/Contact.h; sourceTree = "<group>"; };
+		442EEE25179A022D00622510 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = Models/Contact.m; sourceTree = "<group>"; };
+		442EEE27179A033300622510 /* ContactService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactService.h; path = Services/ContactService.h; sourceTree = "<group>"; };
+		442EEE28179A033300622510 /* ContactService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactService.m; path = Services/ContactService.m; sourceTree = "<group>"; };
+		442EEE2A179A438700622510 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		442EEE2B179A438700622510 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		442EEE2E179A458B00622510 /* RecentNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentNavigationViewController.h; path = Controllers/RecentNavigationViewController.h; sourceTree = "<group>"; };
+		442EEE2F179A458B00622510 /* RecentNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentNavigationViewController.m; path = Controllers/RecentNavigationViewController.m; sourceTree = "<group>"; };
+		442EEE32179A4B7F00622510 /* RecentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentHomeViewController.h; path = Controllers/Recent/RecentHomeViewController.h; sourceTree = "<group>"; };
+		442EEE33179A4B7F00622510 /* RecentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentHomeViewController.m; path = Controllers/Recent/RecentHomeViewController.m; sourceTree = "<group>"; };
+		442EEE34179A4B7F00622510 /* RecentHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecentHomeViewController.xib; path = Controllers/Recent/RecentHomeViewController.xib; sourceTree = "<group>"; };
+		442EEE37179AE32000622510 /* InboxNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxNavigationViewController.h; path = Controllers/Inbox/InboxNavigationViewController.h; sourceTree = "<group>"; };
+		442EEE38179AE32000622510 /* InboxNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxNavigationViewController.m; path = Controllers/Inbox/InboxNavigationViewController.m; sourceTree = "<group>"; };
+		442EEE3B179AF67200622510 /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearbyViewController.h; path = Controllers/Nearby/NearbyViewController.h; sourceTree = "<group>"; };
+		442EEE3C179AF67200622510 /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearbyViewController.m; path = Controllers/Nearby/NearbyViewController.m; sourceTree = "<group>"; };
+		442EEE3F179AF7D300622510 /* InviteNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InviteNavigationViewController.h; path = Controllers/Invite/InviteNavigationViewController.h; sourceTree = "<group>"; };
+		442EEE40179AF7D300622510 /* InviteNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InviteNavigationViewController.m; path = Controllers/Invite/InviteNavigationViewController.m; sourceTree = "<group>"; };
+		442EEE63179B509E00622510 /* IntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroView.h; path = Views/Intro/IntroView.h; sourceTree = "<group>"; };
+		442EEE64179B509E00622510 /* IntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroView.m; path = Views/Intro/IntroView.m; sourceTree = "<group>"; };
+		442EEE6B179B7FF400622510 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		442EEE6E179B806700622510 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		442EEE70179B806D00622510 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		442EEE72179B84CB00622510 /* MadeInTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MadeInTextView.h; path = Views/Intro/MadeInTextView.h; sourceTree = "<group>"; };
+		442EEE73179B84CB00622510 /* MadeInTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MadeInTextView.m; path = Views/Intro/MadeInTextView.m; sourceTree = "<group>"; };
+		442EEE75179B8ACB00622510 /* LogoRED.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoRED.h; path = Views/Intro/LogoRED.h; sourceTree = "<group>"; };
+		442EEE76179B8ACB00622510 /* LogoRED.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoRED.m; path = Views/Intro/LogoRED.m; sourceTree = "<group>"; };
+		442EEE79179B997D00622510 /* Gotham-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.ttf"; sourceTree = "<group>"; };
+		442EEE7E179B9B8000622510 /* Gotham-Ultra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Ultra.ttf"; sourceTree = "<group>"; };
 		44886B961799F25D00474C35 /* LetsGetLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsGetLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44886B991799F25D00474C35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44886B9B1799F25D00474C35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +113,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442EEE71179B806D00622510 /* QuartzCore.framework in Frameworks */,
+				442EEE6F179B806700622510 /* CFNetwork.framework in Frameworks */,
+				442EEE2C179A438700622510 /* AddressBook.framework in Frameworks */,
+				442EEE2D179A438800622510 /* AddressBookUI.framework in Frameworks */,
 				44886B9C1799F25D00474C35 /* CoreGraphics.framework in Frameworks */,
+				442EEE6D179B7FF400622510 /* Reveal.framework in Frameworks */,
 				44886B9E1799F25D00474C35 /* UIKit.framework in Frameworks */,
 				44886B9A1799F25D00474C35 /* Foundation.framework in Frameworks */,
 				40DF68F4AEBA438F82D5F027 /* libPods.a in Frameworks */,
@@ -86,9 +141,14 @@
 		442EEE061799F33E00622510 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				442EEE1E1799F73200622510 /* MainTabViewController.h */,
+				442EEE1F1799F73200622510 /* MainTabViewController.m */,
 				442EEE0A1799F38200622510 /* LoadingViewController.h */,
 				442EEE0B1799F38200622510 /* LoadingViewController.m */,
-				442EEE0C1799F38200622510 /* LoadingViewController.xib */,
+				442EEE31179A4B5300622510 /* Recent */,
+				442EEE3A179AE32600622510 /* Inbox */,
+				442EEE3E179AF67500622510 /* Nearby */,
+				442EEE42179AF7E800622510 /* Invite */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -96,6 +156,10 @@
 		442EEE071799F34C00622510 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				442EEE21179A01E000622510 /* Appointment.h */,
+				442EEE22179A01E000622510 /* Appointment.m */,
+				442EEE24179A022D00622510 /* Contact.h */,
+				442EEE25179A022D00622510 /* Contact.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -103,6 +167,12 @@
 		442EEE081799F35200622510 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				442EEE63179B509E00622510 /* IntroView.h */,
+				442EEE64179B509E00622510 /* IntroView.m */,
+				442EEE72179B84CB00622510 /* MadeInTextView.h */,
+				442EEE73179B84CB00622510 /* MadeInTextView.m */,
+				442EEE75179B8ACB00622510 /* LogoRED.h */,
+				442EEE76179B8ACB00622510 /* LogoRED.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -110,8 +180,58 @@
 		442EEE091799F35A00622510 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				442EEE27179A033300622510 /* ContactService.h */,
+				442EEE28179A033300622510 /* ContactService.m */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		442EEE0F1799F49A00622510 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				442EEE7E179B9B8000622510 /* Gotham-Ultra.ttf */,
+				442EEE79179B997D00622510 /* Gotham-Book.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		442EEE31179A4B5300622510 /* Recent */ = {
+			isa = PBXGroup;
+			children = (
+				442EEE2E179A458B00622510 /* RecentNavigationViewController.h */,
+				442EEE2F179A458B00622510 /* RecentNavigationViewController.m */,
+				442EEE32179A4B7F00622510 /* RecentHomeViewController.h */,
+				442EEE33179A4B7F00622510 /* RecentHomeViewController.m */,
+				442EEE34179A4B7F00622510 /* RecentHomeViewController.xib */,
+			);
+			name = Recent;
+			sourceTree = "<group>";
+		};
+		442EEE3A179AE32600622510 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				442EEE37179AE32000622510 /* InboxNavigationViewController.h */,
+				442EEE38179AE32000622510 /* InboxNavigationViewController.m */,
+			);
+			name = Inbox;
+			sourceTree = "<group>";
+		};
+		442EEE3E179AF67500622510 /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				442EEE3B179AF67200622510 /* NearbyViewController.h */,
+				442EEE3C179AF67200622510 /* NearbyViewController.m */,
+			);
+			name = Nearby;
+			sourceTree = "<group>";
+		};
+		442EEE42179AF7E800622510 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				442EEE3F179AF7D300622510 /* InviteNavigationViewController.h */,
+				442EEE40179AF7D300622510 /* InviteNavigationViewController.m */,
+			);
+			name = Invite;
 			sourceTree = "<group>";
 		};
 		44886B8D1799F25D00474C35 = {
@@ -137,6 +257,11 @@
 		44886B981799F25D00474C35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				442EEE70179B806D00622510 /* QuartzCore.framework */,
+				442EEE6E179B806700622510 /* CFNetwork.framework */,
+				442EEE6B179B7FF400622510 /* Reveal.framework */,
+				442EEE2A179A438700622510 /* AddressBook.framework */,
+				442EEE2B179A438700622510 /* AddressBookUI.framework */,
 				44886B991799F25D00474C35 /* Foundation.framework */,
 				44886B9B1799F25D00474C35 /* CoreGraphics.framework */,
 				44886B9D1799F25D00474C35 /* UIKit.framework */,
@@ -149,12 +274,12 @@
 		44886B9F1799F25D00474C35 /* LetsGetLunch */ = {
 			isa = PBXGroup;
 			children = (
+				44886BA81799F25D00474C35 /* AppDelegate.h */,
+				44886BA91799F25D00474C35 /* AppDelegate.m */,
 				442EEE091799F35A00622510 /* Services */,
 				442EEE081799F35200622510 /* Views */,
 				442EEE071799F34C00622510 /* Models */,
 				442EEE061799F33E00622510 /* Controllers */,
-				44886BA81799F25D00474C35 /* AppDelegate.h */,
-				44886BA91799F25D00474C35 /* AppDelegate.m */,
 				44886BAB1799F25D00474C35 /* Images.xcassets */,
 				44886BA01799F25D00474C35 /* Supporting Files */,
 			);
@@ -164,6 +289,7 @@
 		44886BA01799F25D00474C35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				442EEE0F1799F49A00622510 /* Fonts */,
 				44886BA11799F25D00474C35 /* LetsGetLunch-Info.plist */,
 				44886BA21799F25D00474C35 /* InfoPlist.strings */,
 				44886BA51799F25D00474C35 /* main.m */,
@@ -267,8 +393,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442EEE0E1799F38200622510 /* LoadingViewController.xib in Resources */,
+				442EEE7F179B9B8000622510 /* Gotham-Ultra.ttf in Resources */,
 				44886BA41799F25D00474C35 /* InfoPlist.strings in Resources */,
+				442EEE36179A4B7F00622510 /* RecentHomeViewController.xib in Resources */,
+				442EEE7C179B997D00622510 /* Gotham-Book.ttf in Resources */,
 				44886BAC1799F25D00474C35 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,9 +447,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442EEE35179A4B7F00622510 /* RecentHomeViewController.m in Sources */,
+				442EEE65179B509E00622510 /* IntroView.m in Sources */,
+				442EEE77179B8ACB00622510 /* LogoRED.m in Sources */,
+				442EEE3D179AF67200622510 /* NearbyViewController.m in Sources */,
+				442EEE41179AF7D300622510 /* InviteNavigationViewController.m in Sources */,
 				44886BAA1799F25D00474C35 /* AppDelegate.m in Sources */,
+				442EEE201799F73200622510 /* MainTabViewController.m in Sources */,
 				442EEE0D1799F38200622510 /* LoadingViewController.m in Sources */,
+				442EEE74179B84CB00622510 /* MadeInTextView.m in Sources */,
+				442EEE23179A01E000622510 /* Appointment.m in Sources */,
+				442EEE29179A033300622510 /* ContactService.m in Sources */,
+				442EEE26179A022D00622510 /* Contact.m in Sources */,
+				442EEE30179A458B00622510 /* RecentNavigationViewController.m in Sources */,
 				44886BA61799F25D00474C35 /* main.m in Sources */,
+				442EEE39179AE32000622510 /* InboxNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +577,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LetsGetLunch/LetsGetLunch-Prefix.pch";
 				INFOPLIST_FILE = "LetsGetLunch/LetsGetLunch-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,9 +600,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LetsGetLunch/LetsGetLunch-Prefix.pch";
 				INFOPLIST_FILE = "LetsGetLunch/LetsGetLunch-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

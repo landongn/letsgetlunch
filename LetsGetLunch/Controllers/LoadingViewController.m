@@ -7,27 +7,70 @@
 //
 
 #import "LoadingViewController.h"
+#import "IntroView.h"
 
-@interface LoadingViewController ()
+@interface LoadingViewController () {
+}
 
 @end
 
 @implementation LoadingViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)init {
+    self = [super init];
     if (self) {
         // Custom initialization
+        _introView = [[IntroView alloc] init];
+        _madeInView = [[MadeInTextView alloc] init];
+        _logoView = [[LogoRED alloc] init];
+        
+        self.view.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    __weak LoadingViewController *this = self;
+    
+    _introView.alpha = 1.0f;
+    _madeInView.alpha = 1.0f;
+    _logoView.alpha = 0.0f;
+    
+    [self.view addSubview: _introView];
+    [self.view addSubview: _madeInView];
+    [self.view addSubview: _logoView];
+
+
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [UIView animateWithDuration:1.5f animations:^{
+        _introView.alpha = 1.0f;
+        _logoView.frame = CGRectMake(0, 170, 320, 120);
+        _logoView.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5f animations:^{
+            _madeInView.alpha = 1.0f;
+            _logoView.alpha = 1.0f;
+            _logoView.frame = CGRectMake(0, -320, 320, 120);
+        } completion:^(BOOL finished) {
+            [this dismissLoadingView];
+        }];
+    }];
 }
+
+- (void) dismissLoadingView {
+    
+    __weak LoadingViewController *this = self;
+    
+    [UIView animateWithDuration:.50 animations:^{
+        this.view.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"AppLoaded" object:this]];
+    }];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
