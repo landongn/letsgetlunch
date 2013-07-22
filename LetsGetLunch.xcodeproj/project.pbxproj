@@ -29,6 +29,8 @@
 		442EEE77179B8ACB00622510 /* LogoRED.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EEE76179B8ACB00622510 /* LogoRED.m */; };
 		442EEE7C179B997D00622510 /* Gotham-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 442EEE79179B997D00622510 /* Gotham-Book.ttf */; };
 		442EEE7F179B9B8000622510 /* Gotham-Ultra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 442EEE7E179B9B8000622510 /* Gotham-Ultra.ttf */; };
+		4449C633179C80C20093DB83 /* InboxService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4449C632179C80C20093DB83 /* InboxService.m */; };
+		4449C636179C80F80093DB83 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4449C635179C80F80093DB83 /* Location.m */; };
 		44886B9A1799F25D00474C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44886B991799F25D00474C35 /* Foundation.framework */; };
 		44886B9C1799F25D00474C35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44886B9B1799F25D00474C35 /* CoreGraphics.framework */; };
 		44886B9E1799F25D00474C35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44886B9D1799F25D00474C35 /* UIKit.framework */; };
@@ -89,6 +91,10 @@
 		442EEE76179B8ACB00622510 /* LogoRED.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoRED.m; path = Views/Intro/LogoRED.m; sourceTree = "<group>"; };
 		442EEE79179B997D00622510 /* Gotham-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.ttf"; sourceTree = "<group>"; };
 		442EEE7E179B9B8000622510 /* Gotham-Ultra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Ultra.ttf"; sourceTree = "<group>"; };
+		4449C631179C80C20093DB83 /* InboxService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxService.h; path = Services/InboxService.h; sourceTree = "<group>"; };
+		4449C632179C80C20093DB83 /* InboxService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxService.m; path = Services/InboxService.m; sourceTree = "<group>"; };
+		4449C634179C80F80093DB83 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Models/Location.h; sourceTree = "<group>"; };
+		4449C635179C80F80093DB83 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Models/Location.m; sourceTree = "<group>"; };
 		44886B961799F25D00474C35 /* LetsGetLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsGetLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44886B991799F25D00474C35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44886B9B1799F25D00474C35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,6 +166,8 @@
 				442EEE22179A01E000622510 /* Appointment.m */,
 				442EEE24179A022D00622510 /* Contact.h */,
 				442EEE25179A022D00622510 /* Contact.m */,
+				4449C634179C80F80093DB83 /* Location.h */,
+				4449C635179C80F80093DB83 /* Location.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -182,6 +190,8 @@
 			children = (
 				442EEE27179A033300622510 /* ContactService.h */,
 				442EEE28179A033300622510 /* ContactService.m */,
+				4449C631179C80C20093DB83 /* InboxService.h */,
+				4449C632179C80C20093DB83 /* InboxService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -457,10 +467,12 @@
 				442EEE0D1799F38200622510 /* LoadingViewController.m in Sources */,
 				442EEE74179B84CB00622510 /* MadeInTextView.m in Sources */,
 				442EEE23179A01E000622510 /* Appointment.m in Sources */,
+				4449C633179C80C20093DB83 /* InboxService.m in Sources */,
 				442EEE29179A033300622510 /* ContactService.m in Sources */,
 				442EEE26179A022D00622510 /* Contact.m in Sources */,
 				442EEE30179A458B00622510 /* RecentNavigationViewController.m in Sources */,
 				44886BA61799F25D00474C35 /* main.m in Sources */,
+				4449C636179C80F80093DB83 /* Location.m in Sources */,
 				442EEE39179AE32000622510 /* InboxNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

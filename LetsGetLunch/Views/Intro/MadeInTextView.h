@@ -10,17 +10,5 @@
 
 @interface MadeInTextView : UIView
 
-@property (strong, nonatomic) NSArray *intro;
-@property (strong, nonatomic) NSString* introText;
-@property (strong, nonatomic) NSTimer *printer1;
-@property (strong, nonatomic) NSTimer *printer2;
-@property (strong, nonatomic) NSTimer *printer3;
-@property (strong, nonatomic) NSTimer *printer4;
-@property (strong, nonatomic) NSTimer *printer5;
-@property (strong, nonatomic) NSTimer *printer6;
-@property (strong, nonatomic) NSTimer *printer7;
-
-
-- (void) addWord: (NSTimer*)timer;
 
 @end
