@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecentService.h"
 
-@interface RecentHomeViewController : UIViewController
+@interface RecentHomeViewController : UIViewController <NSCoding, UITableViewDataSource, UITableViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UITableView *RecentTableView;
+@property (strong, nonatomic) NSMutableArray *recentContacts;
 
+@property (nonatomic) uint count;
 @end

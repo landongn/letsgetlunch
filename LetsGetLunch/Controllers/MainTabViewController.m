@@ -8,6 +8,7 @@
 
 #import "MainTabViewController.h"
 #import "LoadingViewController.h"
+#import "MainTabViewBG.h"
 
 
 @interface MainTabViewController () {
@@ -26,6 +27,9 @@
         _SendInvitation =    [[InviteNavigationViewController alloc] init];
         _Inbox =             [[InboxNavigationViewController alloc] init];
         self.viewControllers = @[_Recent, _Nearby, _SendInvitation, _Inbox];
+        
+        
+        
     }
     return self;
 }

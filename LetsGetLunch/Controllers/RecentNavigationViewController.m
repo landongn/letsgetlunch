@@ -21,9 +21,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        Home = [[RecentHomeViewController alloc] initWithNibName:nil bundle:nil];
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Recent" image:[UIImage imageNamed:@"253-person"] selectedImage:[UIImage imageNamed:@"253-person"]];
+        Home = [[RecentHomeViewController alloc] init];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Recent" image:[UIImage imageNamed:@"253-person"] tag:1];
         self.navigationItem.title = @"Recent Contacts";
+        self.title = @"Recent";
+        self.viewControllers = @[Home];
     }
     return self;
 }
@@ -32,6 +34,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+//    [self pushViewController:Home animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,7 +14,7 @@
 
 - (id)init
 {
-    self = [super initWithFrame:CGRectMake(40, 130, 320, 120)];
+    self = [super initWithFrame:CGRectMake(50, 130, 320, 120)];
     if (self) {
         idx = 0;
         // Initialization code

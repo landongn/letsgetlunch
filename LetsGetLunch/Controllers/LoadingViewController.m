@@ -31,6 +31,7 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     __weak LoadingViewController *this = self;
     
     _introView.alpha = 1.0f;
@@ -41,10 +42,10 @@
     [self.view addSubview: _madeInView];
     [self.view addSubview: _logoView];
 
-
+    
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [super viewDidLoad];
-    [UIView animateWithDuration:1.5f animations:^{
+    
+    [UIView animateWithDuration:1.0f animations:^{
         _introView.alpha = 1.0f;
         _logoView.frame = CGRectMake(0, 170, 320, 120);
         _logoView.alpha = 1.0f;
@@ -52,7 +53,6 @@
         [UIView animateWithDuration:0.5f animations:^{
             _madeInView.alpha = 1.0f;
             _logoView.alpha = 1.0f;
-            _logoView.frame = CGRectMake(0, -320, 320, 120);
         } completion:^(BOOL finished) {
             [this dismissLoadingView];
         }];

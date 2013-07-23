@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Nearby" image:[UIImage imageNamed:@"125-food"] selectedImage:[UIImage imageNamed:@"125-food"]];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Nearby" image:[UIImage imageNamed:@"125-food"] tag:0];
         self.navigationItem.title = @"Places Nearby";
     }
     return self;

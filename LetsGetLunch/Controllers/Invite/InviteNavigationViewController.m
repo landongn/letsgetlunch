@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Send Invite" image:[UIImage imageNamed:@"145-persondot"] selectedImage:[UIImage imageNamed:@"145-persondot"]];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Send Invite" image:[UIImage imageNamed:@"145-persondot"] tag:3];
         self.navigationItem.title = @"Invites";
     }
     return self;
