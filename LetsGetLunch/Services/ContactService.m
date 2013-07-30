@@ -7,6 +7,8 @@
 //
 
 #import "ContactService.h"
+#import <AddressBookUI/AddressBookUI.h>
+#import <Addressbook/AddressBook.h>
 
 
 @implementation ContactService {
@@ -17,6 +19,14 @@
     
     
     return @[];
+}
+ 
+
+#pragma mark - AddressBook Resources
+
+- (void) fetchAddressBookContacts {
+    
+    
 }
 
 @end

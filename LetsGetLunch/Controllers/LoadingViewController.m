@@ -45,12 +45,12 @@
     
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     
-    [UIView animateWithDuration:1.0f animations:^{
+    [UIView animateWithDuration:2.0f animations:^{
         _introView.alpha = 1.0f;
         _logoView.frame = CGRectMake(0, 170, 320, 120);
         _logoView.alpha = 1.0f;
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.5f animations:^{
+        [UIView animateWithDuration:1.0f animations:^{
             _madeInView.alpha = 1.0f;
             _logoView.alpha = 1.0f;
         } completion:^(BOOL finished) {
