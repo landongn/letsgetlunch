@@ -11,6 +11,7 @@
 #import "InboxNavigationViewController.h"
 #import "NearbyViewController.h"
 #import "InviteNavigationViewController.h"
+#import "MainTabViewBG.h"
 
 @interface MainTabViewController : UITabBarController
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) NearbyViewController *Nearby;
 @property (nonatomic, strong) InviteNavigationViewController *SendInvitation;
 @property (nonatomic, strong) InboxNavigationViewController *Inbox;
+@property (nonatomic, strong) MainTabViewBG *tabBarView;
 
 
 @end

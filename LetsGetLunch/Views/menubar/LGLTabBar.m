@@ -1,39 +1,24 @@
 //
-//  MainTabViewBG.m
+//  LGLTabBar.m
 //  LetsGetLunch
 //
-//  Created by Landon Noss on 7/22/13.
+//  Created by Landon Noss on 7/30/13.
 //  Copyright (c) 2013 RED Interactive Agency. All rights reserved.
 //
 
-#import "MainTabViewBG.h"
+#import "LGLTabBar.h"
 
-@implementation MainTabViewBG
+@implementation LGLTabBar
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        // Initialization code
     }
     return self;
 }
 
-- (void) setTabs: (NSArray *) array {
-    if (_tabs != array) {
-        for (LGLTab *tab in _tabs) {
-            
-        }
-    }
-}
-
-- (void) tabBar:(LGLTabBar *)tabBar didSelectTabAtIndex:(NSInteger)index {
-    
-}
-
-- (void) setSelectedTab:(LGLTab *)tab animated:(BOOL)animated {
-    
-}
 
 
 - (void)drawRect:(CGRect)rect
@@ -89,8 +74,6 @@
     CGGradientRelease(gradient);
     CGColorSpaceRelease(colorSpace);
     
-
-
 }
 
 

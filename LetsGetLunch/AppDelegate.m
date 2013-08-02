@@ -31,7 +31,7 @@
         self.window.rootViewController = [[LoadingViewController alloc] init];
         firstLoad = NO;
     } else {
-        [self.window setRootViewController:[[MainTabViewController alloc] init]];
+        [self.window setRootViewController:[[HomeViewController alloc] init]];
     }
     
     [self.window makeKeyAndVisible];
@@ -66,7 +66,7 @@
 }
 
 - (void)loadingFinished:(NSNotification *)notification {
-    self.window.rootViewController = [[MainTabViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = [[HomeViewController alloc] initWithNibName:nil bundle:nil];
 }
 
 @end
