@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePosition:) name:@"MenuBarIndexChanged" object:nil];
     }
     return self;
 }
@@ -22,20 +23,36 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    UIImage* image145persondot2 = [UIImage imageNamed: @"image145persondot2"];
-    UIColor* rain = [UIColor colorWithRed: 0.448 green: 0.779 blue: 0.778 alpha: 1];
-    //// Rectangle 3 Drawing
-    UIBezierPath* rectangle3Path = [UIBezierPath bezierPathWithRect: CGRectMake(0, 192, 64, 64)];
-    [rain setFill];
-    [rectangle3Path fill];
+    UIImage* image = [UIImage imageNamed: @"145-persondot"];
+    UIColor* color = [UIColor colorWithRed: 0.448 green: 0.779 blue: 0.778 alpha: 1];
+    //// Parent Rect
+    UIBezierPath* parentRect = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 64, 64)];
+    [color setFill];
+    [parentRect fill];
     
-    
-    //// Rectangle 4 Drawing
-    UIBezierPath* rectangle4Path = [UIBezierPath bezierPathWithRect: CGRectMake(20, 211, 29, 29)];
+    //// icon Rect
+    UIBezierPath* iconRect = [UIBezierPath bezierPathWithRect: CGRectMake(19, 19, 29, 33)];
     CGContextSaveGState(context);
-    [rectangle4Path addClip];
-    [image145persondot2 drawInRect: CGRectMake(20, 211, image145persondot2.size.width, image145persondot2.size.height)];
+    [iconRect addClip];
+    [image drawInRect: CGRectMake(19, 19, image.size.width, image.size.height)];
     CGContextRestoreGState(context);
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.alpha = 1.0f;
+    } completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MenuBarIndexChanged" object:self userInfo:@{@"type": @"inbox"}];
+}
+
+-(void) updatePosition: (NSNotification *) notification {
+    if (![[notification.userInfo valueForKey:@"type"] isEqual: @"inbox"]) {
+        [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.alpha = 0.3f;
+        } completion:nil];
+    }
 }
 
 @end

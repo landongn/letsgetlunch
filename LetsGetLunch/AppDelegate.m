@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "MainTabViewController.h"
 #import "LoadingViewController.h"
+#import <Routable/Routable.h>
+
 
 @implementation AppDelegate {
     BOOL firstLoad;
@@ -35,6 +36,11 @@
     }
     
     [self.window makeKeyAndVisible];
+    
+    
+    
+    //[[Routable sharedRouter] map:@"users/:id" toController:[UserController class]];
+
     return YES;
 }
 

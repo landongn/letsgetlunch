@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import <AddressBookUI/AddressBookUI.h>
 
 @interface HomeViewController ()
 
@@ -19,9 +20,14 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _menuBarView = [[MenuBar alloc] init];
+        _menuBarView = [[NavBarViewController alloc] init];
         _dashboardViewController = [[DashboardViewController alloc] init];
-        self.navigationBarHidden = YES;
+        _mainContainer = [[UINavigationController alloc] init];
+        _mainContainer.view.frame = CGRectMake(64, 0, [UIScreen mainScreen].bounds.size.width - 64, [UIScreen mainScreen].bounds.size.height);
+        
+        
+        
+        
     }
     return self;
 }
@@ -31,13 +37,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-    _menuBarView.alpha = 0.0f;
-    [self addChildViewController:_dashboardViewController];
-    [_dashboardViewController.view addSubview:_menuBarView];
+    _menuBarView.view.alpha = 0.0f;
+    _menuBarView.view.frame = CGRectMake(0, 0, 64, 460);
+    [self.view addSubview:_menuBarView.view];
     //display the menubar, animated.
     [UIView animateWithDuration:.3f delay:0.1f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _menuBarView.alpha = 1.0f;
-        _menuBarView.frame = CGRectMake(0, 0, 64, 460);
+        _menuBarView.view.alpha = 1.0f;
+        
     } completion:^(BOOL finished) {
         [_dashboardViewController finishLoading];
     }];

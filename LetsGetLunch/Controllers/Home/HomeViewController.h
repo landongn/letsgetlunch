@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Routable/Routable.h>
 #import "DashboardViewController.h"
-#import "MenuBar.h"
+#import "NavBarViewController.h"
 
-@interface HomeViewController : UINavigationController
+@interface HomeViewController : UIViewController
 
-@property (nonatomic, strong) MenuBar* menuBarView;
+@property (nonatomic, strong) NavBarViewController* menuBarView;
 @property (nonatomic, strong) DashboardViewController* dashboardViewController;
-
+@property (nonatomic, strong) UINavigationController *mainContainer;
 
 @end

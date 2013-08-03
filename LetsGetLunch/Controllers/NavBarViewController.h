@@ -11,6 +11,7 @@
 #import "GetDrinksMenuButton.h"
 #import "FindLocationMenuButton.h"
 #import "OpenInboxMenuButton.h"
+#import "NavContainer.h"
 
 @interface NavBarViewController : UIViewController
 
@@ -18,5 +19,5 @@
 @property (nonatomic, strong) GetDrinksMenuButton *GetDrinksMenuButton;
 @property (nonatomic, strong) FindLocationMenuButton *FindLocationMenuButton;
 @property (nonatomic, strong) OpenInboxMenuButton *OpenInboxMenuButton;
-
+@property (nonatomic, strong) NavContainer *containerView;
 @end

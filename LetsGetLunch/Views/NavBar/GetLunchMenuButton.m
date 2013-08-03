@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePosition:) name:@"MenuBarIndexChanged" object:nil];
     }
     return self;
 }
@@ -22,21 +23,39 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    UIColor* burnorange = [UIColor colorWithRed: 1 green: 0.35 blue: 0.35 alpha: 1];
-    UIImage* image125food2 = [UIImage imageNamed: @"image125food2"];
-    //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 64, 64)];
-    [burnorange setFill];
-    [rectanglePath fill];
+    UIColor* color = [UIColor colorWithRed: 1 green: 0.35 blue: 0.35 alpha: 1];
+    UIImage* image = [UIImage imageNamed: @"125-food"];
     
     
-    //// Rectangle 6 Drawing
-    UIBezierPath* rectangle6Path = [UIBezierPath bezierPathWithRect: CGRectMake(19, 19, 29, 33)];
+    //// Parent Rect
+    UIBezierPath* parentRect = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 64, 64)];
+    [color setFill];
+    [parentRect fill];
+    
+    //// icon Rect
+    UIBezierPath* iconRect = [UIBezierPath bezierPathWithRect: CGRectMake(19, 19, 29, 33)];
     CGContextSaveGState(context);
-    [rectangle6Path addClip];
-    [image125food2 drawInRect: CGRectMake(19, 19, image125food2.size.width, image125food2.size.height)];
+    [iconRect addClip];
+    [image drawInRect: CGRectMake(19, 19, image.size.width, image.size.height)];
     CGContextRestoreGState(context);
 
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.alpha = 1.0f;
+    } completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MenuBarIndexChanged" object:self userInfo:@{@"type": @"food"}];
+}
+
+-(void) updatePosition: (NSNotification *) notification {
+    if (![[notification.userInfo valueForKey:@"type"] isEqual: @"food"]) {
+        [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.alpha = 0.3f;
+        } completion:nil];
+    }
 }
 
 

@@ -19,8 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Nearby" image:[UIImage imageNamed:@"125-food"] tag:0];
-        self.navigationItem.title = @"Places Nearby";
+        _localMap = [[MKMapView alloc] init];
     }
     return self;
 }
@@ -28,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view addSubview:_localMap];
 	// Do any additional setup after loading the view.
 }
 

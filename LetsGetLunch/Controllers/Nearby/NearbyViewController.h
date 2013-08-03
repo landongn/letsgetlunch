@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/Mapkit.h>
 
 @interface NearbyViewController : UINavigationController
+
+@property (strong, nonatomic) MKMapView *localMap;
 
 @end

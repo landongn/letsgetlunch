@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePosition:) name:@"MenuBarIndexChanged" object:nil];
     }
     return self;
 }
@@ -23,22 +24,38 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    UIColor* color3 = [UIColor colorWithRed: 0.644 green: 0.532 blue: 0.701 alpha: 1];
-    UIImage* image144martini = [UIImage imageNamed: @"image144martini"];
-    //// Rectangle 7 Drawing
-    UIBezierPath* rectangle7Path = [UIBezierPath bezierPathWithRect: CGRectMake(0, 64, 64, 64)];
-    [color3 setFill];
-    [rectangle7Path fill];
+    UIColor* color = [UIColor colorWithRed: 0.644 green: 0.532 blue: 0.701 alpha: 1];
+    UIImage* image = [UIImage imageNamed: @"144-martini"];
     
+    //// Parent Rect
+    UIBezierPath* parentRect = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 64, 64)];
+    [color setFill];
+    [parentRect fill];
     
-    //// Rectangle 8 Drawing
-    UIBezierPath* rectangle8Path = [UIBezierPath bezierPathWithRect: CGRectMake(20, 83, 29, 29)];
+    //// icon Rect
+    UIBezierPath* iconRect = [UIBezierPath bezierPathWithRect: CGRectMake(19, 19, 29, 33)];
     CGContextSaveGState(context);
-    [rectangle8Path addClip];
-    [image144martini drawInRect: CGRectMake(20, 83, image144martini.size.width, image144martini.size.height)];
+    [iconRect addClip];
+    [image drawInRect: CGRectMake(19, 19, image.size.width, image.size.height)];
     CGContextRestoreGState(context);
 
     
+}
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.alpha = 1.0f;
+    } completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MenuBarIndexChanged" object:self userInfo:@{@"type": @"drinks"}];
+}
+
+-(void) updatePosition: (NSNotification *) notification {
+    if (![[notification.userInfo valueForKey:@"type"] isEqual: @"drinks"]) {
+        [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.alpha = 0.3f;
+        } completion:nil];
+    }
 }
 
 
