@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"view %f, %f, %f, %f", self.view.frame.size.height, self.view.frame.size.width, self.view.bounds.origin.x, self.view.bounds.origin.y);
 	// Do any additional setup after loading the view.
     
 }

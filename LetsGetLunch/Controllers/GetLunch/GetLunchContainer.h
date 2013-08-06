@@ -10,7 +10,6 @@
 
 @interface GetLunchContainer : UIViewController
 
-@property (nonatomic, strong) UILabel *welcomeText;
-@property (nonatomic, strong) UITextField *personSearch;
+
 
 @end

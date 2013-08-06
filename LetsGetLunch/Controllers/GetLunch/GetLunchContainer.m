@@ -19,9 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _welcomeText = [[UILabel alloc] initWithFrame:CGRectMake(128, 128, 128, 128)];
-        _personSearch = [[UITextField alloc] initWithFrame:CGRectMake(128, 256, 128, 128)];
-        self.view.backgroundColor = [UIColor colorWithRed: 1 green: 0.35 blue: 0.35 alpha: 1];
+        self.view.backgroundColor = foodColor;
     }
     return self;
 }
@@ -29,10 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _welcomeText.text = @"Lets get Lunch";
-    [self.view addSubview:_welcomeText];
-    _personSearch.placeholder = @"start typing a contact name";
-    [self.view addSubview:_personSearch];
+    
 	// Do any additional setup after loading the view.
 }
 
