@@ -7,10 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+
+//services
+#import "Router.h"
+//end services
+
+//root view controller
 #import "HomeViewController.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) HomeViewController* HVC;
+
 - (void)loadingFinished:(NSNotification *)notification;
+
 @end

@@ -28,6 +28,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
+    _HVC = [[HomeViewController alloc] initWithNibName:nil bundle:nil];
+    
     if (firstLoad) {
         self.window.rootViewController = [[LoadingViewController alloc] init];
         firstLoad = NO;
@@ -37,10 +39,18 @@
     
     [self.window makeKeyAndVisible];
     
+    [[Routable sharedRouter] setNavigationController:_HVC.mainContainer];
     
+  
     
-    //[[Routable sharedRouter] map:@"users/:id" toController:[UserController class]];
+    [[Routable sharedRouter] map:@"food/home"   toController:[GetLunchContainer class]];
+    [[Routable sharedRouter] map:@"drinks/home" toController:[GetDrinksContainer class]];
+    [[Routable sharedRouter] map:@"inbox"       toController:[InboxContainer class]];
+    [[Routable sharedRouter] map:@"nearby/home" toController:[NearbyViewController class]];
 
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MenuBarIndexChanged" object:nil userInfo:@{@"type":@"inbox"}];
+    
     return YES;
 }
 
@@ -72,7 +82,7 @@
 }
 
 - (void)loadingFinished:(NSNotification *)notification {
-    self.window.rootViewController = [[HomeViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = _HVC;
 }
 
 @end

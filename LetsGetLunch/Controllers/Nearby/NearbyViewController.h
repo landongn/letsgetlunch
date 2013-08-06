@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
 
-@interface NearbyViewController : UINavigationController
+@interface NearbyViewController : UIViewController
 
 @property (strong, nonatomic) MKMapView *localMap;
 

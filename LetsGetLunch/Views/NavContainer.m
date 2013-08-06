@@ -10,22 +10,15 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation NavContainer {
-    UIColor *foodColor;
-    UIColor *locationColor;
-    UIColor *inboxColor;
-    UIColor *drinksColor;
+
 }
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-
-        foodColor = [UIColor colorWithRed: 1 green: 0.35 blue: 0.35 alpha: 1];
-        locationColor = [UIColor colorWithRed: 0.745 green: 0.887 blue: 0.727 alpha: 1];
-        inboxColor = [UIColor colorWithRed: 0.448 green: 0.779 blue: 0.778 alpha: 1];
-        drinksColor = [UIColor colorWithRed: 0.644 green: 0.532 blue: 0.701 alpha: 1];
         self.layer.backgroundColor = [UIColor whiteColor].CGColor;
         self.backgroundColor = [UIColor clearColor];
+        
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateColor:) name:@"MenuBarIndexChanged" object:nil];
     }
@@ -44,7 +37,7 @@
     CGFloat shadowBlurRadius = 6;
     
     //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 64, 460)];
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 64, [UIScreen mainScreen].bounds.size.height)];
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, shadowOffset, shadowBlurRadius, shadow.CGColor);
     CGContextRestoreGState(context);
@@ -62,6 +55,7 @@
         [UIView animateWithDuration:0.25f animations:^{
             self.layer.backgroundColor = foodColor.CGColor;
         }];
+        [[Router sharedInstance] changeRoute:@"food/home"];
         return;
     }
     
@@ -70,6 +64,7 @@
         [UIView animateWithDuration:0.25f animations:^{
             self.layer.backgroundColor = drinksColor.CGColor;
         }];
+        [[Router sharedInstance] changeRoute:@"drinks/home"];
         return;
     }
     if ([[notification.userInfo valueForKey:@"type"] isEqualToString:@"location"]) {
@@ -77,6 +72,7 @@
         [UIView animateWithDuration:0.25f animations:^{
             self.layer.backgroundColor = locationColor.CGColor;
         }];
+        [[Router sharedInstance] changeRoute:@"nearby/home"];
         return;
     }
     if ([[notification.userInfo valueForKey:@"type"] isEqualToString:@"inbox"]) {
@@ -84,6 +80,7 @@
         [UIView animateWithDuration:0.25f animations:^{
             self.layer.backgroundColor = inboxColor.CGColor;
         }];
+        [[Router sharedInstance] changeRoute:@"inbox"];
         return;
     }
 }

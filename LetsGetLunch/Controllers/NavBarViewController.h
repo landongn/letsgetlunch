@@ -13,11 +13,14 @@
 #import "OpenInboxMenuButton.h"
 #import "NavContainer.h"
 
+
 @interface NavBarViewController : UIViewController
 
 @property (nonatomic, strong) GetLunchMenuButton *GetLunchMenuButton;
 @property (nonatomic, strong) GetDrinksMenuButton *GetDrinksMenuButton;
 @property (nonatomic, strong) FindLocationMenuButton *FindLocationMenuButton;
 @property (nonatomic, strong) OpenInboxMenuButton *OpenInboxMenuButton;
-@property (nonatomic, strong) NavContainer *containerView;
+@property (nonatomic, strong) UIView *containerView;
+
+-(void) selectedIndexChanged:(NSNotification *)notification;
 @end

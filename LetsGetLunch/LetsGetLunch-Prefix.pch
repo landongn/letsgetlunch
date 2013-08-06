@@ -14,3 +14,9 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+#define foodColor [UIColor colorWithRed: 1 green: 0.35 blue: 0.35 alpha: 1]
+#define locationColor [UIColor colorWithRed: 0.745 green: 0.887 blue: 0.727 alpha: 1]
+#define inboxColor [UIColor colorWithRed: 0.448 green: 0.779 blue: 0.778 alpha: 1]
+#define drinksColor [UIColor colorWithRed: 0.644 green: 0.532 blue: 0.701 alpha: 1]

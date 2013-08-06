@@ -45,12 +45,14 @@
     } completion:nil];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"MenuBarIndexChanged" object:self userInfo:@{@"type": @"inbox"}];
+    
+    
 }
 
 -(void) updatePosition: (NSNotification *) notification {
     if (![[notification.userInfo valueForKey:@"type"] isEqual: @"inbox"]) {
         [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
-            self.alpha = 0.3f;
+            self.alpha = 0.8f;
         } completion:nil];
     }
 }

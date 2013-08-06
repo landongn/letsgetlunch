@@ -1,26 +1,27 @@
 //
-//  InviteNavigationViewController.m
+//  baseViewController.m
 //  LetsGetLunch
 //
-//  Created by Landon Noss on 7/20/13.
+//  Created by Landon Noss on 8/5/13.
 //  Copyright (c) 2013 RED Interactive Agency. All rights reserved.
 //
 
-#import "InviteNavigationViewController.h"
+#import "baseViewController.h"
+#import "cardViewBacking.h"
 
-@interface InviteNavigationViewController ()
+@interface baseViewController ()
 
 @end
 
-@implementation InviteNavigationViewController
+@implementation baseViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Send Invite" image:[UIImage imageNamed:@"145-persondot"] tag:3];
-        self.navigationItem.title = @"Invites";
+        self.view = [[cardViewBacking alloc] initWithFrame:CGRectMake(16, 16, 224, 386)];
+        
     }
     return self;
 }

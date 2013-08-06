@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Routable/Routable.h>
 #import "DashboardViewController.h"
+#import "baseViewController.h"
 #import "NavBarViewController.h"
+
+//custom views
+#import "FoodNavigationBar.h"
 
 @interface HomeViewController : UIViewController
 
-@property (nonatomic, strong) NavBarViewController* menuBarView;
+@property (nonatomic, strong) UIViewController* menuBarView;
 @property (nonatomic, strong) DashboardViewController* dashboardViewController;
 @property (nonatomic, strong) UINavigationController *mainContainer;
 

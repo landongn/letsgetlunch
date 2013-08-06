@@ -1,5 +1,5 @@
 //
-//  InboxNavigationViewController.h
+//  InviteNavigationViewController.h
 //  LetsGetLunch
 //
 //  Created by Landon Noss on 7/20/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InboxNavigationViewController : UINavigationController
+@interface InviteContainer : UIViewController
 
 @end
