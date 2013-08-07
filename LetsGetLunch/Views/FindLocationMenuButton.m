@@ -55,9 +55,7 @@
 
 -(void) updatePosition: (NSNotification *) notification {
     if (![[notification.userInfo valueForKey:@"type"] isEqual: @"location"]) {
-        [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
-            self.alpha = 0.8f;
-        } completion:nil];
+        
     }
 }
 @end

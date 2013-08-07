@@ -52,6 +52,10 @@
 		EF94FC9B17B0676E00C2ED4F /* FoodNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FC9A17B0676E00C2ED4F /* FoodNavigationBar.m */; };
 		EF94FC9D17B06B8D00C2ED4F /* transparentpx.png in Resources */ = {isa = PBXBuildFile; fileRef = EF94FC9C17B06B8D00C2ED4F /* transparentpx.png */; };
 		EF94FCA017B071C100C2ED4F /* cardViewBacking.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FC9F17B071C100C2ED4F /* cardViewBacking.m */; };
+		EF94FCA217B173C200C2ED4F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF94FCA117B173C200C2ED4F /* CoreLocation.framework */; };
+		EF94FCA517B174DF00C2ED4F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FCA417B174DF00C2ED4F /* LocationManager.m */; };
+		EF94FCA817B1AAD400C2ED4F /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = EF94FCA617B1AAD400C2ED4F /* 06-magnify.png */; };
+		EF94FCA917B1AAD400C2ED4F /* 06-magnify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF94FCA717B1AAD400C2ED4F /* 06-magnify@2x.png */; };
 		EFA347BF179DB13200462628 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA347BE179DB13200462628 /* Default-568h@2x.png */; };
 		EFA347C2179DB38400462628 /* RecentService.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA347C1179DB38400462628 /* RecentService.m */; };
 		EFE35C4017AB20FA004D92E9 /* NavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE35C3F17AB20FA004D92E9 /* NavBarViewController.m */; };
@@ -152,6 +156,11 @@
 		EF94FC9C17B06B8D00C2ED4F /* transparentpx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentpx.png; sourceTree = "<group>"; };
 		EF94FC9E17B071C100C2ED4F /* cardViewBacking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cardViewBacking.h; path = Views/General/cardViewBacking.h; sourceTree = "<group>"; };
 		EF94FC9F17B071C100C2ED4F /* cardViewBacking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cardViewBacking.m; path = Views/General/cardViewBacking.m; sourceTree = "<group>"; };
+		EF94FCA117B173C200C2ED4F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EF94FCA317B174DF00C2ED4F /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = Services/LocationManager.h; sourceTree = "<group>"; };
+		EF94FCA417B174DF00C2ED4F /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = Services/LocationManager.m; sourceTree = "<group>"; };
+		EF94FCA617B1AAD400C2ED4F /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
+		EF94FCA717B1AAD400C2ED4F /* 06-magnify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x.png"; sourceTree = "<group>"; };
 		EFA347BE179DB13200462628 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EFA347C0179DB38400462628 /* RecentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentService.h; path = Services/RecentService.h; sourceTree = "<group>"; };
 		EFA347C1179DB38400462628 /* RecentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentService.m; path = Services/RecentService.m; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF94FCA217B173C200C2ED4F /* CoreLocation.framework in Frameworks */,
 				EF94FC9517B0547500C2ED4F /* SystemConfiguration.framework in Frameworks */,
 				EF94FC9317B0546F00C2ED4F /* MobileCoreServices.framework in Frameworks */,
 				EFE35C6E17AC82AD004D92E9 /* MapKit.framework in Frameworks */,
@@ -273,6 +283,8 @@
 				EFA347C1179DB38400462628 /* RecentService.m */,
 				EF94FC8C17B0195A00C2ED4F /* Router.h */,
 				EF94FC8D17B0195A00C2ED4F /* Router.m */,
+				EF94FCA317B174DF00C2ED4F /* LocationManager.h */,
+				EF94FCA417B174DF00C2ED4F /* LocationManager.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -337,6 +349,7 @@
 		44886B981799F25D00474C35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF94FCA117B173C200C2ED4F /* CoreLocation.framework */,
 				EF94FC9417B0547400C2ED4F /* SystemConfiguration.framework */,
 				EF94FC9217B0546F00C2ED4F /* MobileCoreServices.framework */,
 				EFE35C6D17AC82AD004D92E9 /* MapKit.framework */,
@@ -442,6 +455,8 @@
 		EFA347C3179DB47A00462628 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EF94FCA617B1AAD400C2ED4F /* 06-magnify.png */,
+				EF94FCA717B1AAD400C2ED4F /* 06-magnify@2x.png */,
 				EFE35C4F17AB289E004D92E9 /* 07-map-marker.png */,
 				EFE35C5017AB289E004D92E9 /* 07-map-marker@2x.png */,
 				EFE35C4717AB288F004D92E9 /* 125-food.png */,
@@ -572,6 +587,8 @@
 				EFE35C5117AB289E004D92E9 /* 07-map-marker.png in Resources */,
 				EFE35C5217AB289E004D92E9 /* 07-map-marker@2x.png in Resources */,
 				EF94FC9D17B06B8D00C2ED4F /* transparentpx.png in Resources */,
+				EF94FCA817B1AAD400C2ED4F /* 06-magnify.png in Resources */,
+				EF94FCA917B1AAD400C2ED4F /* 06-magnify@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +667,7 @@
 				EF94FC9117B03BB400C2ED4F /* baseViewController.m in Sources */,
 				EF94FC9B17B0676E00C2ED4F /* FoodNavigationBar.m in Sources */,
 				EF94FCA017B071C100C2ED4F /* cardViewBacking.m in Sources */,
+				EF94FCA517B174DF00C2ED4F /* LocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
