@@ -6,20 +6,17 @@
 //  Copyright (c) 2013 RED Interactive Agency. All rights reserved.
 //
 
-#import "GetLunchMenuButton.h"
+#import "pickLocation.h"
 
-@implementation GetLunchMenuButton {
-    BOOL viewsActive;
-}
+@implementation pickLocation
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        viewsActive = NO;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePosition:) name:@"MenuBarIndexChanged" object:nil];
-        _locationMenuButton = [[pickLocation alloc] init];
+        self.frame = CGRectMake(0, 0, 64, 64);
     }
     return self;
 }
@@ -28,11 +25,11 @@
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     UIColor* color = [UIColor colorWithRed: 1 green: 0.35 blue: 0.35 alpha: 1];
-    UIImage* image = [UIImage imageNamed: @"125-food"];
+    UIImage* image = [UIImage imageNamed: @"30-at"];
     
     
     //// Parent Rect
-    UIBezierPath* parentRect = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 64, 64)];
+    UIBezierPath* parentRect = [UIBezierPath bezierPathWithRect: CGRectMake(0, 64, 64, 64)];
     [color setFill];
     [parentRect fill];
     
@@ -42,38 +39,20 @@
     [iconRect addClip];
     [image drawInRect: CGRectMake(19, 19, image.size.width, image.size.height)];
     CGContextRestoreGState(context);
-
+    
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
-    [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
-        self.alpha = 1.0f;
-        _locationMenuButton.frame = CGRectMake(0, 64, 64, 64);
-        _locationMenuButton.alpha = 1.0f;
-
-    } completion:nil];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"MenuBarIndexChanged" object:self userInfo:@{@"type": @"food"}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SubMenuFood" object:self userInfo:@{@"step": @1}];
 }
 
 -(void) updatePosition: (NSNotification *) notification {
-    
     if (![[notification.userInfo valueForKey:@"type"] isEqual: @"food"]) {
-        viewsActive = NO;
-       [UIView animateWithDuration:0.2f animations:^{
-           _locationMenuButton.frame = CGRectMake(0, 0, 64, 64);
-           _locationMenuButton.alpha = 1.0f;
-       } completion:^(BOOL finished) {
-            [_locationMenuButton removeFromSuperview];
-           _locationMenuButton = nil;
-       }];
-    } else {
-        if(!viewsActive) {
-            [self addSubview:_locationMenuButton];
-        }
-        
-        
+        [UIView animateWithDuration:0.3f animations:^{
+            self.frame = CGRectMake(0, 64, 64, 64);
+            self.alpha = 1.0f;
+        } completion:nil];
     }
 }
 

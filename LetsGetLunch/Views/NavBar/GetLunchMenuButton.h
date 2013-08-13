@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 RED Interactive Agency. All rights reserved.
 //
 
+#import "pickLocation.h"
+
 #import <UIKit/UIKit.h>
 
 @interface GetLunchMenuButton : UIView
+
+@property (nonatomic, strong) pickLocation *locationMenuButton;
 
 @end

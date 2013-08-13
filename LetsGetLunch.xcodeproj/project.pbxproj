@@ -43,6 +43,9 @@
 		EF39208717A838BF001F6E51 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF39208617A838BF001F6E51 /* DashboardViewController.m */; };
 		EF39208A17A85C1A001F6E51 /* agsquare_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = EF39208817A85C1A001F6E51 /* agsquare_@2X.png */; };
 		EF39208B17A85C1A001F6E51 /* agsquare.png in Resources */ = {isa = PBXBuildFile; fileRef = EF39208917A85C1A001F6E51 /* agsquare.png */; };
+		EF6D4BEC17B2B77700CD050D /* pickLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D4BEB17B2B77700CD050D /* pickLocation.m */; };
+		EF6D4BEF17B2B88200CD050D /* 30-at.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6D4BED17B2B88200CD050D /* 30-at.png */; };
+		EF6D4BF017B2B88200CD050D /* 30-at@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6D4BEE17B2B88200CD050D /* 30-at@2x.png */; };
 		EF94FC8817B011D900C2ED4F /* GetDrinksContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FC8717B011D900C2ED4F /* GetDrinksContainer.m */; };
 		EF94FC8B17B011FA00C2ED4F /* GetLunchContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FC8A17B011FA00C2ED4F /* GetLunchContainer.m */; };
 		EF94FC8E17B0195A00C2ED4F /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FC8D17B0195A00C2ED4F /* Router.m */; };
@@ -141,6 +144,10 @@
 		EF39208617A838BF001F6E51 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardViewController.m; path = Controllers/Home/DashboardViewController.m; sourceTree = "<group>"; };
 		EF39208817A85C1A001F6E51 /* agsquare_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agsquare_@2X.png"; sourceTree = "<group>"; };
 		EF39208917A85C1A001F6E51 /* agsquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agsquare.png; sourceTree = "<group>"; };
+		EF6D4BEA17B2B77700CD050D /* pickLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pickLocation.h; path = Views/subNavigation/Food/pickLocation.h; sourceTree = "<group>"; };
+		EF6D4BEB17B2B77700CD050D /* pickLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pickLocation.m; path = Views/subNavigation/Food/pickLocation.m; sourceTree = "<group>"; };
+		EF6D4BED17B2B88200CD050D /* 30-at.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30-at.png"; sourceTree = "<group>"; };
+		EF6D4BEE17B2B88200CD050D /* 30-at@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30-at@2x.png"; sourceTree = "<group>"; };
 		EF94FC8617B011D900C2ED4F /* GetDrinksContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetDrinksContainer.h; path = Controllers/GetDrinks/GetDrinksContainer.h; sourceTree = "<group>"; };
 		EF94FC8717B011D900C2ED4F /* GetDrinksContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetDrinksContainer.m; path = Controllers/GetDrinks/GetDrinksContainer.m; sourceTree = "<group>"; };
 		EF94FC8917B011FA00C2ED4F /* GetLunchContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetLunchContainer.h; path = Controllers/GetLunch/GetLunchContainer.h; sourceTree = "<group>"; };
@@ -224,6 +231,7 @@
 		442EEE061799F33E00622510 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFE35C3E17AB20FA004D92E9 /* NavBarViewController.h */,
 				EFE35C3F17AB20FA004D92E9 /* NavBarViewController.m */,
 				EF94FC8517B010E000C2ED4F /* GetDrinks */,
 				EF94FC8417B010DB00C2ED4F /* GetLunch */,
@@ -257,6 +265,7 @@
 		442EEE081799F35200622510 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF6D4BE817B2B74C00CD050D /* subNavigation */,
 				EF94FC9817B0674600C2ED4F /* topNavbars */,
 				EFE35C6417AC7FBF004D92E9 /* Welcome */,
 				EFE35C3D17AB20D6004D92E9 /* NavBarUI */,
@@ -425,6 +434,23 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		EF6D4BE817B2B74C00CD050D /* subNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D4BE917B2B75300CD050D /* Food */,
+			);
+			name = subNavigation;
+			sourceTree = "<group>";
+		};
+		EF6D4BE917B2B75300CD050D /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D4BEA17B2B77700CD050D /* pickLocation.h */,
+				EF6D4BEB17B2B77700CD050D /* pickLocation.m */,
+			);
+			name = Food;
+			sourceTree = "<group>";
+		};
 		EF94FC8417B010DB00C2ED4F /* GetLunch */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +481,8 @@
 		EFA347C3179DB47A00462628 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EF6D4BED17B2B88200CD050D /* 30-at.png */,
+				EF6D4BEE17B2B88200CD050D /* 30-at@2x.png */,
 				EF94FCA617B1AAD400C2ED4F /* 06-magnify.png */,
 				EF94FCA717B1AAD400C2ED4F /* 06-magnify@2x.png */,
 				EFE35C4F17AB289E004D92E9 /* 07-map-marker.png */,
@@ -474,7 +502,6 @@
 			children = (
 				EFE35C5E17AC4BF2004D92E9 /* OpenInboxMenuButton.h */,
 				EFE35C5F17AC4BF2004D92E9 /* OpenInboxMenuButton.m */,
-				EFE35C3E17AB20FA004D92E9 /* NavBarViewController.h */,
 				EFE35C5517AC4807004D92E9 /* GetLunchMenuButton.h */,
 				EFE35C5617AC4807004D92E9 /* GetLunchMenuButton.m */,
 				EFE35C5817AC49B9004D92E9 /* GetDrinksMenuButton.h */,
@@ -589,6 +616,8 @@
 				EF94FC9D17B06B8D00C2ED4F /* transparentpx.png in Resources */,
 				EF94FCA817B1AAD400C2ED4F /* 06-magnify.png in Resources */,
 				EF94FCA917B1AAD400C2ED4F /* 06-magnify@2x.png in Resources */,
+				EF6D4BEF17B2B88200CD050D /* 30-at.png in Resources */,
+				EF6D4BF017B2B88200CD050D /* 30-at@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +697,7 @@
 				EF94FC9B17B0676E00C2ED4F /* FoodNavigationBar.m in Sources */,
 				EF94FCA017B071C100C2ED4F /* cardViewBacking.m in Sources */,
 				EF94FCA517B174DF00C2ED4F /* LocationManager.m in Sources */,
+				EF6D4BEC17B2B77700CD050D /* pickLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

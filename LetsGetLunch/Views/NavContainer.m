@@ -55,6 +55,7 @@
         [UIView animateWithDuration:0.25f animations:^{
             self.layer.backgroundColor = foodColor.CGColor;
         }];
+        
         [[Router sharedInstance] changeRoute:@"food/home"];
         return;
     }
